@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lottie</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/lottie.min.js"></script>
+</head>
+
+<body>
+
+<h1>Lottie</h1>
+<div class="wrapper">
+  <h2>そのまま表示</h2>
+  <div id="tivel"></div>
+</div>
+<hr>
+<div class="wrapper">
+  <h2>レスポンシブ</h2>
+  <div id="tivel2"></div>
+</div>
+<hr>
+<div class="wrapper">
+  <h2>クリックでアニメーションaa</h2>
+  <div id="tivel3"></div>
+  <p class="btn">クリック</p>
+</div>
+
+<script type="text/javascript">
+  var animationTivel = lottie.loadAnimation({
+  container: document.getElementById('tivel'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'json/data.json'
+});
+
+var animationTivel2 = lottie.loadAnimation({
+  container: document.getElementById('tivel2'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: true,
+  path: 'json/check.json'
+});
+
+var animationTivel3 = lottie.loadAnimation({
+  container: document.getElementById('tivel3'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'json/present.json'
+});
+animationTivel3.setSpeed(0.8);
+
+$(function(){
+  $('.btn').on('click',function(){
+    if(!$(this).hasClass('on')){
+      $(this).addClass('on');
+      $(this).text('戻る');
+
+      //再生
+      animationTivel3.play();     
+
+    } else {
+      $(this).removeClass('on');
+      $(this).text('クリック');
+
+      //リセット
+      animationTivel3.stop();
+    }
+  });
+});
+</script>
+</body>
+</html>
