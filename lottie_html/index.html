@@ -4,26 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Lottie</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/lottie.min.js"></script>
 </head>
 
 <body>
 
+<style>
+  body { width:100%; margin:0 auto; }
+  .wrapper {
+    padding: 0;
+    background-color:#efefef;
+    background:url(../img/bg.png) no-repeat;
+    width:750px;
+  }
+  #tivel { width: 750px; margin: auto; }
+  #tivel2 { width: 60%; margin: auto; }
+</style>
+
+
 <div class="wrapper">
   <div id="tivel"></div>
-</div>
-<hr>
-<div class="wrapper">
-  <h2>レスポンシブ</h2>
   <div id="tivel2"></div>
-</div>
-<hr>
-<div class="wrapper">
-  <h2>クリックでアニメーションaa</h2>
-  <div id="tivel3"></div>
-  <p class="btn">クリック</p>
 </div>
 
 <script type="text/javascript">
@@ -32,7 +35,7 @@
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'json/data.json'
+  path: 'json/check.json'
 });
 
 var animationTivel2 = lottie.loadAnimation({
@@ -40,36 +43,10 @@ var animationTivel2 = lottie.loadAnimation({
   renderer: 'svg',
   loop: false,
   autoplay: true,
-  path: 'json/check.json'
-});
-
-var animationTivel3 = lottie.loadAnimation({
-  container: document.getElementById('tivel3'),
-  renderer: 'svg',
-  loop: false,
-  autoplay: false,
   path: 'json/present.json'
 });
-animationTivel3.setSpeed(0.8);
 
-$(function(){
-  $('.btn').on('click',function(){
-    if(!$(this).hasClass('on')){
-      $(this).addClass('on');
-      $(this).text('戻る');
 
-      //再生
-      animationTivel3.play();     
-
-    } else {
-      $(this).removeClass('on');
-      $(this).text('クリック');
-
-      //リセット
-      animationTivel3.stop();
-    }
-  });
-});
 </script>
 </body>
 </html>
