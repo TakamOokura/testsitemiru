@@ -5,9 +5,11 @@ h1,h2 {
 }
 .wrapper {
   padding: 0;
+  background-color:#efefef;
+  background:url(../img/bg.png) no-repeat;
 }
 #tivel {
-  width: 300px;
+  width: 750px;
   margin: auto;
 }
 #tivel2 {
