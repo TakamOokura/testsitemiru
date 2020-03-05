@@ -12,34 +12,40 @@
 <body>
 
 <style>
-  body { width:100%; margin:0 auto; }
+  body {
+    width:100%; 
+    background-color:#ddd;
+    margin:0;
+  }
   .wrapper {
     padding: 0;
     background-color:#efefef;
-    background:url(../img/bg.png) no-repeat;
+    background:url(img/bg.png) no-repeat;
     width:750px;
+    height:2096px;
+    margin:0 auto;
   }
-  #tivel { width: 750px; margin: auto; }
-  #tivel2 { width: 60%; margin: auto; }
+  #normal1 { width: 136px; margin: auto; }
+  #present { width: 136px; margin: auto; }
 </style>
 
 
 <div class="wrapper">
-  <div id="tivel"></div>
-  <div id="tivel2"></div>
+  <div id="normal1"></div>
+  <div id="present"></div>
 </div>
 
 <script type="text/javascript">
   var animationTivel = lottie.loadAnimation({
-  container: document.getElementById('tivel'),
+  container: document.getElementById('normal1'),
   renderer: 'svg',
-  loop: true,
+  loop: false,
   autoplay: true,
   path: 'json/check.json'
 });
 
 var animationTivel2 = lottie.loadAnimation({
-  container: document.getElementById('tivel2'),
+  container: document.getElementById('present'),
   renderer: 'svg',
   loop: false,
   autoplay: true,
