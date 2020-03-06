@@ -1,37 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lottie</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script type="text/javascript" src="js/lottie.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js"></script>
+</head>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<body>
 
-		<title>Github Pages</title>
-	</head>
-	<body>
+<style>
+  body {
+    width:100%; 
+    background-color:#ddd;
+    margin:0;
+  }
+  .wrapper {
+    padding: 0;
+    background-color:#efefef;
+    background:url(img/bg.png) no-repeat;
+    width:750px;
+    height:2096px;
+    margin:0 auto;
+    position:relative;
+  }
+  #normal1 { width: 137px; position:absolute; top:370px; left:32px; }
+  #normal2 { width: 137px; position:absolute; top:370px; left:169px; }
+  #normal3 { width: 137px; position:absolute; top:370px; left:306px; }
+  #normal4 { width: 137px; position:absolute; top:370px; left:443px; }
+  #present { width: 137px; position:absolute; top:370px; left:581px; }
+</style>
 
-		<div class="container" role="main">
-			
-			<br>
-			<h3>Github Pagesで作った。使っていいのかどうかは確認中。</h3>
-			<div class="card">
-					<img src="IMG_3848.JPG" class="card-img-top" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">20171119</h5>
-						<p class="card-text">小樽でサーモン</p>
-					</div>
-				</div>
-			
-			<br><br>
-			
 
-		</div>
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	</body>
+<div class="wrapper">
+  <div id="normal1"></div>
+  <div id="normal2"></div>
+  <div id="normal3"></div>
+  <div id="normal4"></div>
+  <div id="present"></div>
+</div>
+
+<script type="text/javascript">
+  var animationTivel = lottie.loadAnimation({
+    container: document.getElementById('normal1'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: 'json/check.json'
+  });
+
+  var animationTivel2 = lottie.loadAnimation({
+    container: document.getElementById('normal2'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/check.json'
+  });
+
+  var animationTivel3 = lottie.loadAnimation({
+    container: document.getElementById('normal3'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/check.json'
+  });
+
+  var animationTivel4 = lottie.loadAnimation({
+    container: document.getElementById('normal4'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/check.json'
+  });
+
+  var animationTivelp1 = lottie.loadAnimation({
+    container: document.getElementById('present'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/present.json'
+  });
+
+  setTimeout(function(){
+    animationTivel2.play();
+  }, 1000);
+
+  setTimeout(function(){
+    animationTivel3.play();
+  }, 2000);
+
+  setTimeout(function(){
+    animationTivel4.play();
+  }, 3000);
+
+  setTimeout(function(){
+    animationTivelp1.play();
+  }, 4000);
+
+
+</script>
+
+</body>
 </html>
