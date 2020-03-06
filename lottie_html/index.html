@@ -27,13 +27,19 @@
     margin:0 auto;
     position:relative;
   }
-  #normal1 { width: 136px; position:absolute; top:100px; left:32px; }
-  #present { width: 136px; position:absolute; top:280px; left:32px; }
+  #normal1 { width: 137px; position:absolute; top:370px; left:32px; }
+  #normal2 { width: 137px; position:absolute; top:370px; left:169px; }
+  #normal3 { width: 137px; position:absolute; top:370px; left:306px; }
+  #normal4 { width: 137px; position:absolute; top:370px; left:443px; }
+  #present { width: 137px; position:absolute; top:370px; left:581px; }
 </style>
 
 
 <div class="wrapper">
   <div id="normal1"></div>
+  <div id="normal2"></div>
+  <div id="normal3"></div>
+  <div id="normal4"></div>
   <div id="present"></div>
 </div>
 
@@ -46,7 +52,7 @@
     path: 'json/check.json'
   });
 
-  var animationTivel2 = lottie.loadAnimation({
+  var animationTivelp1 = lottie.loadAnimation({
     container: document.getElementById('present'),
     renderer: 'svg',
     loop: false,
@@ -55,7 +61,7 @@
   });
 
   setTimeout(function(){
-    animationTivel2.play();
+    animationTivelp1.play();
   }, 1000);
 
 
