@@ -52,6 +52,30 @@
     path: 'json/check.json'
   });
 
+  var animationTivel2 = lottie.loadAnimation({
+    container: document.getElementById('normal2'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/check.json'
+  });
+
+  var animationTivel3 = lottie.loadAnimation({
+    container: document.getElementById('normal3'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/check.json'
+  });
+
+  var animationTivel4 = lottie.loadAnimation({
+    container: document.getElementById('normal4'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/check.json'
+  });
+
   var animationTivelp1 = lottie.loadAnimation({
     container: document.getElementById('present'),
     renderer: 'svg',
@@ -61,8 +85,20 @@
   });
 
   setTimeout(function(){
-    animationTivelp1.play();
+    animationTivel2.play();
   }, 1000);
+
+  setTimeout(function(){
+    animationTivel3.play();
+  }, 2000);
+
+  setTimeout(function(){
+    animationTivel4.play();
+  }, 3000);
+
+  setTimeout(function(){
+    animationTivelp1.play();
+  }, 4000);
 
 
 </script>
